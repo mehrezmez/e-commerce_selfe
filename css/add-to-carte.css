@@ -1,0 +1,211 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        padding: 0;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+        padding: 0;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1070px;
+        padding: 0;
+    }
+}
+/*start header*/
+.header {
+    padding-top: 20px;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 767px) {
+    .header .container {
+        align-items: center;
+    }   
+}
+.header .container a img {
+    width: 150px;
+}
+.header .container .barre {
+    display: flex;
+    align-items: center;
+}
+.header .container .barre > a {
+    margin-left: 20px;
+}
+.header .container .barre > a img {
+    width: 30px;
+}
+@media (max-width: 767px) {
+    .header .container .barre {
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+    }
+}
+.header .container .barre > img {
+    width: 30px;
+    display: none;
+}
+@media (max-width: 767px) {
+    .header .container .barre > img {
+        display: block;
+    }   
+}
+.header .container .barre ul {
+    display: flex;
+    list-style: none;
+}
+.header .container .barre ul li a {
+    color: #777;
+    text-decoration: none;
+    margin-left: 20px;
+}
+@media (max-width: 767px) {
+    .header .container .barre ul {
+        display: none;
+    }
+    .header .container .barre > img:hover + ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: rgb(0, 0, 0, 80%);
+    }
+    .header .container .barre ul li {
+        padding: 10px;
+    }
+    .header .container .barre ul li a {
+        color: white;
+        text-decoration: none;
+    }
+}
+/*end header*/
+/*start table*/
+.table {
+    padding-top: 140px;
+    padding-bottom: 40px;
+}
+.table .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.table .container > .head {
+    flex-basis: 100%;
+    display: flex;
+    background-color: #f6623c;
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+}
+.table .container .head p:first-of-type {
+    flex-basis: 40%;
+}
+.table .container .main {
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.table .container .main .box {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.table .container .main .box:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+.table .container .main .box .image {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .table .container .main .box .image {
+        justify-content: center;
+        flex-wrap: wrap;
+    }   
+    .table .container .main .box .image .text {
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+.table .container .main .box .image img {
+    width: 100px;
+}
+.table .container .main .box .image p {
+    color: #777;
+    padding: 5px;
+    font-size: 14px;
+}
+.table .container .main .box .image p:first-of-type {
+    font-weight: bold;
+    font-size: 16px;
+}
+.table .container .main .box .image p:last-of-type {
+    color: #f6623c;
+}
+.table .container .main .box input {
+    width: 50px;
+    padding: 5px;
+}
+.table .container .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    border-top: 2px solid #f6623c;
+    padding: 0 10px;
+}
+.table .container .footer .box {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.table .container .footer .check {
+    padding: 10px 20px;
+    background-color: #f6623c;
+    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.table .container .footer .check:hover {
+    background-color: #973d26;
+}
+
+
+
+/*end table*/
+
+
+
