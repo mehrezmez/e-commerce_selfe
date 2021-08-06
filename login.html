@@ -38,29 +38,37 @@
     <!--start login-->
     <div class="login">
         <div class="container">
-            <img src="images/image1.png" alt="">
+            <img onclick="test()" src="images/image1.png" alt="">
             <div class="box">
-                <div class="text">
-                    <p>Login</p>
-                    <p>Register</p>
-                </div>
-                <form class="one" action="">
+                <p onclick="login()">Login</p>
+                <p onclick="register()">Register</p>
+                <form class="one" id="log" action="">
                     <input type="text" name="" id="" placeholder="username">
                     <input type="password" name="" id="" placeholder="password">
                     <input type="submit" value="Login">
+                    <a href="">forget password</a>
                 </form>
-                <!-- <form class="two" action="">
+                <form class="two" id="reg" action="">
                     <input type="text" name="" id="" placeholder="username">
                     <input type="email" name="" id="" placeholder="email">
                     <input type="password" name="" id="" placeholder="password">
                     <input type="submit" value="Register">
-                </form> -->
-                <a href="">forget password</a>
+                </form>
             </div>
         </div>
     </div>
-
-
     <!--end login-->
+    <script>
+        var log = document.getElementById("log")
+        var reg = document.getElementById("reg")
+        function login() {
+            log.style.display = "flex";
+            reg.style.display = "none";
+        }
+        function register() {
+            reg.style.display = "flex";
+            log.style.display = "none";
+        }
+    </script>
 </body>
 </html>

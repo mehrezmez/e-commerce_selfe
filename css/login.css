@@ -144,14 +144,10 @@ body {
     }   
 }
 .login .container .box {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 30%;
-    align-items: center;
-    justify-content: center;
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 1px 15px 0px #777;
+    text-align: center;
 }
 @media (max-width: 767px) {
     .login .container .box {
@@ -166,29 +162,23 @@ body {
     justify-content: center;
     gap: 30px;
 }
-.login .container .box .text p {
+.login .container .box p {
     font-size: 20px;
     font-weight: bold;
-    padding-bottom: 5px;
-    position: relative;
-}
-.login .container .box .text p::before {
-    content: "";
-    background-color: white;
-    height: 2px;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-}
-.login .container .box .text p:hover::before {
-    background-color: #f6623c;
+    padding: 25px 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
 }
 .login .container .box form {
     flex-basis: 100%;
     gap: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px 20px;
+}
+.login .container .box form:nth-of-type(2) {
+    display: none;
 }
 .login .container .box form input {
     padding: 10px 15px;
@@ -201,9 +191,11 @@ body {
     border: none;
     border-radius: 20px;
 }
-.login .container .box > a {
+.login .container .box form.one a {
     text-decoration: none;
     color: #777;
+    margin: 0 auto;
+    font-size: 14px;
 }
 
 
